@@ -1,0 +1,197 @@
+:root {
+    --bg-main: #0b0b0d;          
+    --bg-card: #131316;          
+    --bg-card-hover: #1a1a1e;    
+    --border-subtle: #222227;    
+    --pastel-blue: #b9e3de;      
+    --pastel-green: #d2eebd;     
+    --pastel-purple: #e1d5f5;    
+    --text-main: #f4f4f5;        
+    --text-muted: #a1a1aa;       
+}
+* {
+    box-sizing: border-box;
+    transition: all 0.25s ease-in-out;
+}
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.01em;
+}
+.hero-container {
+    max-width: 1100px;
+    margin: 4rem auto 2rem auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.profile-frame {
+    position: relative;
+    flex-shrink: 0;
+}
+.profile-frame::before {
+    content: '';
+    position: absolute;
+    top: -8px; left: -8px; right: -8px; bottom: -8px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--pastel-blue), transparent, var(--pastel-purple));
+    opacity: 0.4;
+    z-index: 1;
+}
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    display: block;
+    background-color: var(--bg-card);
+}
+.hero-text {
+    flex-grow: 1;
+}
+.fancy-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(135deg, var(--text-main) 30%, var(--pastel-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+.tagline {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem 0;
+    max-width: 700px;
+    font-weight: 400;
+}
+main {
+    max-width: 1100px;
+    margin: 0 auto 5rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 18px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+section:hover {
+    border-color: #303036;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: -0.02em;
+}
+#summary h2 { color: var(--text-main); }
+#experience h2 { color: var(--pastel-blue); }
+#achievements h2 { color: var(--pastel-green); }
+#testimonials h2 { color: var(--pastel-purple); }
+.job-block {
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+.job-block:last-child {
+    margin-bottom: 0;
+}
+.job-block::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    border: 2px solid var(--pastel-blue);
+}
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-main);
+}
+.company-name {
+    color: var(--pastel-blue);
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+.date-badge {
+    background-color: #1a1a22;
+    color: var(--text-muted);
+    padding: 0.35rem 0.75rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border-subtle);
+}
+ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+}
+li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+li strong {
+    color: var(--text-main);
+}
+blockquote {
+    margin: 0 0 1.5rem 0;
+    padding: 1.5rem;
+    background-color: #17171c;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    font-style: normal;
+}
+blockquote p {
+    margin: 0 0 1rem 0;
+    color: var(--text-main);
+    font-size: 1rem;
+}
+cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--pastel-purple);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+    .hero-container { flex-direction: column; text-align: center; margin-top: 2rem; gap: 1.5rem; }
+    .job-header { flex-direction: column; gap: 0.5rem; }
+    .date-badge { align-self: flex-start; }
+    .fancy-name { font-size: 2.5rem; }
+}
