@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruchika Sharma | Salesforce Delivery Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <img src="profile.jpg" alt="Ruchika Sharma" class="profile-photo">
+        <h1 class="fancy-name">Ruchika Sharma</h1>
+        <p class="tagline">Salesforce Delivery Leader | Bridging Technical Rigor with Strategic Vision</p>
+    </header>
+    <main>
+        <div id="home-section"></div>
+        <div id="experience-section"></div>
+        <div id="achievements-section"></div>
+        <div id="testimonials-section"></div>
+        <div id="education-section"></div>
+    </main>
+    <script>
+        function loadSection(id, filePath) {
+            fetch(filePath)
+                .then(response => { if (!response.ok) throw new Error('Failed to load ' + filePath); return response.text(); })
+                .then(data => { document.getElementById(id).innerHTML = data; })
+                .catch(error => console.error(error));
+        }
+        loadSection('home-section', 'sections/home.html');
+        loadSection('experience-section', 'sections/experience.html');
+        loadSection('achievements-section', 'sections/achievements.html');
+        loadSection('testimonials-section', 'sections/testimonials.html');
+        loadSection('education-section', 'sections/education.html');
+    </script>
+</body>
+</html>

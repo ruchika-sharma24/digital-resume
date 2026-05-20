@@ -1,0 +1,81 @@
+:root {
+    --bg-color: #121214;
+    --card-bg: #1c1c1f;
+    --text-main: #e4e4e7;
+    --text-muted: #a1a1aa;
+    --pastel-primary: #b3e5fc;
+    --pastel-accent: #c8e6c9;
+    --font-fancy: 'Playfair Display', 'Georgia', serif;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: "Product Sans", "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #18181b 0%, var(--bg-color) 100%);
+}
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--pastel-primary);
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.fancy-name {
+    font-family: var(--font-fancy);
+    font-size: 3rem;
+    color: var(--pastel-primary);
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+section {
+    margin-bottom: 3rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--pastel-primary);
+}
+h2 {
+    color: var(--pastel-primary);
+    border-bottom: 1px solid #27272a;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+h3 {
+    color: var(--pastel-accent);
+    margin-bottom: 0.2rem;
+}
+.date-location {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.5rem; }
+blockquote {
+    border-left: 3px solid var(--pastel-accent);
+    background: #27272a;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-style: italic;
+}
